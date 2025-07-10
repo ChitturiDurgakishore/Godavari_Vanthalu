@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# Django stuff:
+*.sqlite3
+
+# VS Code
+.vscode/
