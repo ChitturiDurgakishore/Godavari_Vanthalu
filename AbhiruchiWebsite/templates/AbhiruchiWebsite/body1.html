@@ -1,0 +1,95 @@
+<style>
+  .gallery-section {
+    background-color: #fffaf5;
+    padding: 60px 30px;
+    text-align: center;
+  }
+
+  .gallery-section h2 {
+    font-size: 2.8rem;
+    color: #c0392b;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-family: 'Noto Sans Telugu', serif;
+  }
+
+  .food-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .food-card {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+  }
+
+  .food-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .food-card p {
+    font-family: 'Noto Sans Telugu', serif;
+    font-size: 1.25rem;
+    color: #c0392b;
+    margin: 12px 0 20px 0;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .gallery-section h2 {
+      font-size: 2rem;
+    }
+
+    .food-card p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+{% load static %}
+<section class="gallery-section" id="menu">
+  <h2>మా ప్రఖ్యాత వంటకాలు</h2>
+  <div class="food-gallery">
+    <div class="food-card">
+      <img src="{% static 'AbhiruchiWebsite/images/biryani.jpeg' %}" alt="Biryani">
+      <p> కుండ బిర్యానీ</p>
+    </div>
+    <div class="food-card">
+      <img src="{% static 'AbhiruchiWebsite/images/dosa.jpg' %}" alt="Dosa">
+      <p>దోసా</p>
+    </div>
+    <div class="food-card">
+      <img src="{% static 'AbhiruchiWebsite/images/meals.avif' %}" alt="South Indian Thali">
+      <p>ఆంధ్రా తలీ</p>
+    </div>
+    <div class="food-card">
+      <img src="{% static 'AbhiruchiWebsite/images/snacks.jpeg' %}" alt="Evening Snacks">
+      <p>స్నాక్స్</p>
+    </div>
+    <div class="food-card">
+      <img src="{% static 'AbhiruchiWebsite/images/sweets.jpg' %}" alt="Indian Sweets">
+      <p>స్వీట్స్</p>
+    </div>
+    <div class="food-card">
+      <img src="{% static 'AbhiruchiWebsite/images/pulihora.jpeg' %}" alt="Pulihora">
+      <p>పులిహోర</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,135 @@
+{% extends 'AbhiruchiWebsite/base.html' %}
+{% load static %}
+
+{% block title %}Abhiruchi{% endblock %}
+
+{% block extra_head %}
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+<style>
+  /* First Section (Intro) */
+  .first-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff2e6, #ffe8cc);
+    padding: 60px 30px;
+  }
+
+  .text-area {
+    flex: 1 1 400px;
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  .text-area h1 {
+    font-size: 3.0rem;
+    font-family: 'Noto Sans Telugu', serif;
+    color: #c0392b;
+    margin-bottom: 20px;
+  }
+
+  .text-area p {
+    font-size: 1.4rem;
+    color: #444;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .highlight {
+    color: #e67e22;
+    font-weight: bold;
+  }
+
+  .cta-btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .cta-btn:hover {
+    background-color: #a93226;
+  }
+
+  .image-area {
+    flex: 1 1 400px;
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  .image-area img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .image-area img:hover {
+    transform: scale(1.03);
+  }
+  .telugu-text {
+  font-family: 'Noto Sans Telugu', serif;
+  font-size: 1.3rem;      /* Adjust size */
+  line-height: 1.6;
+  color: #333333;         /* Dark gray */
+  font-weight: 500;       /* Medium weight */
+  letter-spacing: 0.02em; /* Slight spacing */
+}
+
+
+  @media (max-width: 768px) {
+    .first-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .text-area h1 {
+      font-size: 3rem;
+    }
+
+    .text-area p {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+{% endblock %}
+{%block header %}
+{% include 'AbhiruchiWebsite/header.html'%}
+{%endblock %}
+{% block content %}
+<section class="first-section">
+  <div class="text-area">
+    <h1> 🌿గోదావరి వంతలు 🌿</h1>
+    <p class="telugu-text">
+      ఆంధ్రా వంటకాల <span class="highlight">అసలైన రుచి</span>ను అనుభవించండి!
+      మసాలా కూరలు నుండి మధురమైన మిఠాయిల వరకు, ప్రతి నోరు పూర్తిగా
+<span class="highlight">రుచి మరియు పరంపర తో కూడిన ప్రయాణం.</span>.
+    </p>
+    <p class="telugu-text">
+     జాగ్రత్తగా ఎంపిక చేసిన పదార్థాలు. కాలానుగుణంగా నిరూపితమైన వంటలు.
+      ప్రేమతో వడ్డించబడినవి.
+    </p>
+    <a href="/" class="cta-btn">Explore Our Menu</a>
+  </div>
+  <div class="image-area">
+    <img src="{% static 'AbhiruchiWebsite/images/meals.avif' %}" alt="Delicious Food">
+  </div>
+</section>
+{% endblock %}
+
+{% block SecondContent %}
+  {% include 'AbhiruchiWebsite/body1.html' %}
+{% endblock %}

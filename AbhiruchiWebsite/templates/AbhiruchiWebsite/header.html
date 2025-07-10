@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand"> <i class="bi bi-leaf-fill" style="color: lightgreen;"></i><span style="color: green;">గోదావరి</span> Vanthalu</a> <i class="bi bi-leaf-fill" style="color: lightgreen;"></i>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Styles specific to the navbar can stay here or be moved to a static CSS file */
+  .navbar {
+    background-color: black;
+    padding: 1rem 2rem;
+    position:fixed; /* This should probably be 'sticky' or handled by Bootstrap's fixed-top */
+    width: 100%; /* Ensure it spans full width when fixed */
+    z-index: 1030; /* Ensure it's above other content if fixed */
+  }
+
+  .navbar-brand {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffb347 !important; /* This will override the lightgreen/green for Vanthalu part */
+    letter-spacing: 1px;
+    display: flex; /* Added to align icon and text nicely */
+    align-items: center; /* Added to align icon and text vertically */
+    gap: 5px; /* Adds a small gap between icon and text */
+  }
+
+  .navbar-brand .bi { /* Target the icon inside the brand */
+    font-size: 1.5rem; /* Adjust icon size relative to brand text */
+  }
+
+  .nav-link {
+    color: #fff !important;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #ffb347 !important;
+  }
+
+  .navbar-toggler {
+    border-color: #fff;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+</style>
