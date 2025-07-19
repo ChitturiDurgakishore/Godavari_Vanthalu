@@ -4,4 +4,5 @@ from AbhiruchiWebsite import views
 
 urlpatterns = [
     path('', views.Home),
+    path('DB',views.DBI),
 ]
